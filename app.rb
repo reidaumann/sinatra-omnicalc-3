@@ -9,7 +9,7 @@ get("/umbrella") do
   erb(:umbrella_form)
 end
 
-get("/process_umbrella") do
+get("/umbrella_results") do
   @loc = params.fetch("user_loc")
   @loc_url_version = @loc.gsub(" ","+")
   gmaps_key = ENV.fetch("GMAPS_KEY")
