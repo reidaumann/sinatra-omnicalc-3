@@ -38,7 +38,7 @@ post("/process_umbrella") do
   hourly_data_array = @hourly.fetch("data")
   @hourly_data_hash = hourly_data_array.at(0)
   @current_summary = @hourly_data_hash.fetch("summary")
-  @first_hourly_precip = @hourly_data_hash.fetch("precipprobability")
+  #@first_hourly_precip = @hourly_data_hash.fetch("precipprobability")
   twelvehour_data_hash = hourly_data_array[1..12]
 
   yesrainy = false
