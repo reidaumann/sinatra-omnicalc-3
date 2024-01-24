@@ -38,7 +38,7 @@ post("/process_umbrella") do
   hourly_data_array = @hourly.fetch("data")
   @hourly_data_hash = hourly_data_array.at(0)
   @current_summary = @hourly_data_hash.fetch("summary")
-  #@first_hourly_precip = @hourly_data_hash.fetch("precipprobability")
+  @first_hourly_precip = @hourly_data_hash.fetch("precipProbability")
   twelvehour_data_hash = hourly_data_array[1..12]
 
   yesrainy = false
@@ -46,7 +46,7 @@ post("/process_umbrella") do
   preciptime_array = []
 
     twelvehour_data_hash.each do |hourly|
-      precipprob = hourly.fetch("precipprobability")
+      precipprob = hourly.fetch("precipProbability")
       precipprob_array << precipprob  
 
       if precipprob > 0.1
