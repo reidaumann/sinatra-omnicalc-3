@@ -1,8 +1,17 @@
 <h1>Should I take an umbrella?</h1>
 
-<dl>
-  <dt>User's location</dt>
-  <dd><%= @user_location %></dd>
-</dl>
+<div>User location</div>
+<dd><%= @loc %></dd>
+<div>Latitue</div>
+<dd><%= @lat %></dd>
+<div>Longitude</div>
+<dd><%= @lng %></dd>
+<div>Current temperature</div>
+<dd><%= @current_temperature %></dd>
+<div>Current summary</div>
+<dd><%= @current_summary %></dd>
+<div>Umbrella?</div>
+<dd><%= @outcome %></dd>
 
-<a href="/umbrella">Go back</a>
+
+<p><a href="/umbrella">Go back</a></p>
